@@ -1,0 +1,163 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'cascadia code', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+html{
+    font-size: 62.5%;
+}
+
+.nav{
+    height: 7rem;
+    background-color: #0a1930;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+}
+
+@keyframes blink{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+.logospan{
+    position: absolute;
+    left: 7%;
+}
+.logospan span{
+    font-size: 3rem;
+    color: white;
+}
+ion-icon{
+    font-size: 2rem;
+    position: absolute;
+    color: white;
+    left: 5%;
+}
+.logospan span:nth-child(2){
+    color: violet;
+    animation: blink 0.8s linear infinite;
+}
+#click{
+    display: none;
+    pointer-events: none;
+}
+.navmenu li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+    position: relative;
+    transition: 0.5s;
+    text-shadow: 0px 0px 30px rgb(255, 255, 255);
+    letter-spacing: 0;
+    
+}
+.navmenu li{
+    list-style: none;
+}
+.navmenu{
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    gap: 3.5rem;
+    right: 5%;
+    width: fit-content;
+}
+
+.navmenu li a:hover{
+    color: #64ffda;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 30px #64ffda;
+
+}
+.navmenu li .hire{
+    color: #64ffda;
+    /* letter-spacing: 1px; */
+    text-shadow: 0px 0px 30px #64ffda;
+
+}
+.gap{
+    height: 7rem;
+    width: 100%;
+    position: relative;
+}
+.sec1{
+    height: calc(100vh - 7rem);
+    bottom: 0;
+    left: 0;
+    background-color: #0a1930;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+.socials{
+    width: 5rem;
+    height: 50%;
+    position: fixed;
+    left: 6%;
+
+    bottom: 0;
+    z-index: 80;
+    display: flex;
+    justify-content: center;
+}
+.dash{
+    position: absolute;
+    width: 0.2rem;
+    height: 50%;
+    bottom: 0;
+    z-index: 81;
+    background-color: rgb(196, 196, 196);
+}
+#s2{
+    left: auto;
+    right: 6%;
+    background-color: transparent;
+}
+#s2 span{
+    position: inherit;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(90deg);
+    height: 1rem;
+    width: fit-content;
+    font-size: 1.5rem;
+    color: rgb(196, 196, 196);
+    bottom: 40%;
+}
+#s1 .soci{
+    position: fixed;
+    bottom: 25%;
+    width: 3rem;
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.soci ion-icon{
+    font-size: 2.7rem;
+    color: rgb(196, 196, 196);
+    margin: 0.4rem;
+    position: relative;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.soci ion-icon:hover{
+    color: #64ffda;
+    transform: translateY(-0.5rem);
+}
