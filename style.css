@@ -5,17 +5,20 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'cascadia code', sans-serif;
+    transition: 0.3s all;
 }
 body{
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #0a1930;
+
 }
 html{
     font-size: 62.5%;
 }
 
 .nav{
-    height: 7rem;
+    height: 10vh;
     background-color: #0a1930;
     width: 100%;
     display: flex;
@@ -43,11 +46,9 @@ html{
 }
 ion-icon{
     font-size: 2rem;
-    position: absolute;
     color: white;
-    left: 5%;
 }
-.logospan span:nth-child(2){
+.logospan span:nth-child(3){
     color: violet;
     animation: blink 0.8s linear infinite;
 }
@@ -73,7 +74,7 @@ ion-icon{
     position: absolute;
     flex-direction: row;
     gap: 3.5rem;
-    right: 5%;
+    right: 7%;
     width: fit-content;
 }
 
@@ -90,19 +91,11 @@ ion-icon{
 
 }
 .gap{
-    height: 7rem;
+    height: 10vh;
     width: 100%;
     position: relative;
 }
-.sec1{
-    height: calc(100vh - 7rem);
-    bottom: 0;
-    left: 0;
-    background-color: #0a1930;
-    width: 100%;
-    position: absolute;
-    z-index: 0;
-}
+
 .socials{
     width: 5rem;
     height: 50%;
@@ -115,9 +108,9 @@ ion-icon{
     justify-content: center;
 }
 .dash{
-    position: absolute;
+    position: inherit;
     width: 0.2rem;
-    height: 50%;
+    top: 85%;
     bottom: 0;
     z-index: 81;
     background-color: rgb(196, 196, 196);
@@ -133,21 +126,27 @@ ion-icon{
     text-align: center;
     justify-content: center;
     align-items: center;
-    transform: rotate(90deg);
+    transform: rotate(90deg) translateX(-50%);
     height: 1rem;
     width: fit-content;
     font-size: 1.5rem;
     color: rgb(196, 196, 196);
-    bottom: 40%;
+    bottom: 16%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#s2 span:hover{
+    letter-spacing: 1px;
+    color: #64ffda;
 }
 #s1 .soci{
     position: fixed;
-    bottom: 25%;
     width: 3rem;
     height: 33%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    bottom: 15%;
 }
 .soci ion-icon{
     font-size: 2.7rem;
@@ -160,4 +159,116 @@ ion-icon{
 .soci ion-icon:hover{
     color: #64ffda;
     transform: translateY(-0.5rem);
+}
+.sec1{
+    left: 10%;
+    height: 90vh;
+    background-color: #0a1930;
+    width: 80%;
+    margin: 0;
+    padding: 3%;
+    display: flex;
+    position: relative;
+    z-index: 0;
+}
+.sec2{
+    left: 10%;
+    height: max-content;
+    background-color: #0a1930;
+    width: 80%;
+    margin: 0;
+    padding: 3%;
+    display: flex;
+    position: relative;
+    z-index: 0;
+}
+.writings, .project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 50%;
+    padding-right: 4rem;
+}
+.pic{
+     width: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.sec2 .pic{
+    padding-right: 5rem;
+
+}
+.pic img{
+    width: 80%;
+    aspect-ratio: 2.143/2.327;
+    filter: drop-shadow(10px 10px 20px #64ffdb3a);
+}
+.writings h3,.project h3{
+    font-size: 2.2rem;
+    color: rgb(196, 196, 196);
+}
+.writings h1,.project h1{
+    color: rgb(196, 196, 196);
+    font-size: 4rem;
+}
+.sec2 .writings h1{
+    margin-bottom: 2rem;
+}
+.writings p,.project p{
+    color: rgb(196, 196, 196);
+    font-size: 1.8rem;
+}
+.writings div,.project div{
+    color: rgb(196, 196, 196);
+    font-size: 1.8rem;
+    
+}
+.writings a{
+    font-size: 2.2rem;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    background-color: #64ffda;
+    width: max-content;
+    color: #0a1930;
+    border-radius: 3rem;
+    margin-top: 2rem;
+    border: 2px solid #64ffda;
+
+    transition: 0.3s;
+}
+.writings a:hover{
+    background-color: transparent;
+    border: 2px solid #64ffda;
+    color: #64ffda;
+    border-radius: 3rem;
+    margin-top: 2rem;
+}
+div b{
+    color: #64ffda;
+    font-weight: normal;
+}
+.list{
+    font-size: 1.6rem;
+    display: flex;
+    color: rgb(196, 196, 196);
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.list div{
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+}
+.list>div>ion-icon{
+    color: #64ffdb93;
+    font-size: 1.5rem;
+}
+.project{
+    width: 100%;
+    align-items: center;
 }
