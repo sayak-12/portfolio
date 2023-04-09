@@ -272,3 +272,118 @@ div b{
     width: 100%;
     align-items: center;
 }
+.project h1{
+    margin:  5rem 0;
+}
+.project1{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 4rem 0;
+    height: max-content;
+}
+.project1 .pic{
+    background-image: url(Untitled-1.png);
+    aspect-ratio: 4/3;
+    width: 60%;
+    position: relative;
+    background-size: cover;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.342);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.project1 .pic::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #0e443756;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: 0.3s ;
+}
+.details, .details1{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.details1{
+    align-items: flex-start;
+
+}
+.project1:nth-child(3) .pic{
+    background-image: url(Untitled.png);
+}
+.project1 .pic:hover::before{
+    
+    opacity: 0;
+}
+.details h3,.details1 h3{
+    font-weight: normal;
+    color: #64ffda;
+    text-align: right;
+    font-size: 1.8rem;
+}
+.details h2,.details1 h2{
+    text-align: right;
+    font-size: 3rem;
+    /* margin-top: 3rem; */
+}
+.details p,.details1 p{
+    text-align: right;
+    font-size: 1.8rem;
+    /* margin-top: 3rem; */
+    padding: 2rem 3rem;
+    width: 115%;
+    position: relative;
+    background: #0d2241;
+    z-index: 5;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.151);
+}
+.details1 p{
+    text-align: left;
+}
+.details1 h2{
+    text-align: left;
+}
+.details1 h3{
+    text-align: left;
+}
+.tech{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    width: max-content;
+    z-index: 5;
+    /* margin-top: 2rem; */
+}
+.tech li{
+    font-size: 1.4rem;
+}
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    /* margin-top: 4rem; */
+}
+.buttons ion-icon{
+    cursor: pointer;
+    font-size: 3rem;
+    color: rgb(196, 196, 196);
+    transition: 0.3s;
+}
+.buttons ion-icon:hover{
+    color: #64ffda;
+}
+.details1 .tech{
+    justify-content: flex-start;
+}
+.details1 .buttons{
+    justify-content: flex-start;
+}
