@@ -281,6 +281,7 @@ div b{
     flex-direction: row;
     margin: 4rem 0;
     height: max-content;
+    margin-bottom: 10rem;
 }
 .project1 .pic{
     background-image: url(Untitled-1.png);
@@ -317,6 +318,9 @@ div b{
 }
 .project1:nth-child(3) .pic{
     background-image: url(Untitled.png);
+}
+.project1:nth-child(4) .pic{
+    background-image: url(caf.png);
 }
 .project1 .pic:hover::before{
     
@@ -386,4 +390,19 @@ div b{
 }
 .details1 .buttons{
     justify-content: flex-start;
+}
+.explore{
+    font-size: 2rem;
+    padding: 2rem 3.2rem;
+    border: 2px solid #64ffda;
+    color: #64ffda;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.342);
+}
+.explore:hover{
+    border: 2px solid #64ffda;
+    background-color: #64ffda;
+    color: #0d2241;
+
 }
