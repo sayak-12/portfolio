@@ -1,5 +1,8 @@
 @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
-
+:root{
+  --width:80%;
+  --left:10%;
+}
 * {
   padding: 0;
   margin: 0;
@@ -12,7 +15,7 @@ body {
   width: 100%;
   height: 100vh;
   background-color: #0a1930;
-
+  position: relative;
 }
 
 html {
@@ -184,10 +187,10 @@ ion-icon {
 }
 
 .sec1 {
-  left: 10%;
+  left: var(--left);
   height: 90vh;
   background-color: #0a1930;
-  width: 80%;
+  width: var(--width);
   margin: 0;
   padding: 3%;
   display: flex;
@@ -197,10 +200,10 @@ ion-icon {
 
 .sec2,
 .sec3 {
-  left: 10%;
+  left: var(--left);
   height: max-content;
   background-color: #0a1930;
-  width: 80%;
+  width: var(--width);
   margin: 0;
   padding: 3%;
   display: flex;
@@ -847,9 +850,9 @@ h1 {
 }
 
 .sec4 {
-  width: 80%;
+  width: var(--width);
   position: relative;
-  left: 10%;
+  left: var(--left);
   padding-bottom: 5rem;
 }
 
@@ -1004,9 +1007,9 @@ h1 {
   margin-bottom: 3rem;
 }
 .msg{
-  width: 80%;
+  width: var(--width);
   position: relative;
-  left: 10%;
+  left: var(--left);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1018,14 +1021,20 @@ h1 {
   color: #cecece;
   text-align: center;
 }
+.msg p:nth-child(1){
+  position: absolute;
+
+  bottom: 9vh;
+
+}
 .msg p:nth-child(2){
-  animation: blink 1.5s linear infinite;
+  animation: blinky 1.5s linear infinite;
   position: absolute;
   display: flex;
   justify-content: center;
   bottom: 5vh;
 }
-@keyframes blink{
+@keyframes blinky{
   from{
     font-size: 1.5rem;
   }
@@ -1079,6 +1088,14 @@ pointer-events: all;
   justify-content: space-between;
   position: relative;
 }
+.sec5{
+  width: 80%;
+    left: 10%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .dsh:nth-child(2){
   width: 3.5rem;
   transform-origin: right;
@@ -1096,6 +1113,39 @@ pointer-events: all;
   transform: rotate(-45deg);
 
 }
+.menuside{
+  width: 50%;
+  height: 90vh;
+  position: fixed;
+  right: 0;
+  top: 10vh;
+  background-color: #0e443756;
+  z-index: 99;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.568);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.menuside.active{
+  transform: translateX(0%);
+  opacity: 1;
+  pointer-events: all;
+}
+.menuside .navmenu{
+  flex-direction: column;
+  opacity: 1;
+  pointer-events: all;
+  right: auto;
+}
+.menuside .navmenu li a{
+  font-size: 2rem;
+}
 @media screen and (max-width:1100px) {
   .navmenu{
     opacity: 0;
@@ -1106,4 +1156,89 @@ pointer-events: all;
     pointer-events: all;
   }
   
+}
+@media screen and (max-width:768px) {
+  :root{
+    --width:100%;
+    --left:0;
+  }
+    .socials{
+      opacity: 0;
+      pointer-events: none;
+    }
+    .sec1,.sec2,.sec3,.sec4,.sec5{
+      padding: 6%;
+    }
+    .project{
+      padding-right: 0;
+    }
+    .sec1{
+      flex-direction: column-reverse;
+      height: max-content;
+    }
+    .sec2{
+      flex-direction: column;
+    }
+    .sec2 .pic{
+      padding-right: 0;
+    }
+    .writings, .pic{
+      width: 100%;
+    }
+    .project1{
+      flex-direction: column;
+      margin-bottom: 3rem;
+      margin-top: 2rem;
+    }
+  .project1 .pic{
+    width: 100%;
+  }
+  .project1:nth-child(3){
+    flex-direction: column-reverse;
+  }
+  .details, .details1,.details p,.details1 p{
+    width: 100%;
+  }
+  .details, .details1{
+    margin-top: 3rem;
+    gap: 1.4rem;
+  }
+  
+}
+@media screen and (max-width:500px) {
+  .list{
+    flex-direction: column;
+  }
+  .list div{
+    width: 100%;
+  }
+  .sec5{
+    width: var(--width);
+    left: 0;
+  }
+  html{
+    font-size: 55%;
+  }
+  .container .row100 .inputBox.textarea{
+    height: 16rem;
+    
+  }
+  .menuside{
+    width: 70%;
+  }
+  .writings{
+    padding-right: 0;
+  }
+  
+}
+@media screen and (max-width:320px) {
+  .tech{
+    flex-wrap: wrap;
+    width: 100%;
+    line-height: normal;
+  }
+  .writings h1, .project h1, h1{
+    text-align: center;
+    font-size: 3rem;
+  }
 }

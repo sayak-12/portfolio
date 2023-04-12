@@ -49,4 +49,5 @@ document.querySelector(".nav").addEventListener("", ()=>{
 // const timer = setInterval(typename, 1000);
 document.querySelector('.phnmenu').addEventListener("click", ()=>{
   document.querySelector('.phnmenu').classList.toggle("active");
+  document.querySelector('.menuside').classList.toggle("active");
 });
