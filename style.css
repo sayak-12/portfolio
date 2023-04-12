@@ -908,15 +908,9 @@ h1 {
     width: 100%;
   }
 }
-@media screen and (min-width:650px) {
-  .row100{
-    flex-direction: column;
-  }
-  .sec3 .project{
-    padding-right: 0;
-  }
-  .education{
-    width: 100%;
+@media screen and (min-width:1100px) {
+  .container{
+    width: 70%;
   }
 }
 .container .row100 .inputBox input,
@@ -1003,4 +997,15 @@ h1 {
   color: #0a1930;
   font-size: 18px;
   border-radius: 2px;
+}
+.sec5 .project{
+  margin-bottom: 5rem;
+}
+.msg{
+  width: 80%;
+  position: relative;
+  left: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
