@@ -874,12 +874,13 @@ h1 {
   text-align: center;
   margin-bottom: 10px;
 }
-
+.sec5 .project{
+  padding-right: 0;
+}
 .container .row100 {
   position: relative;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
 }
 
 .container .row100 .col {
@@ -896,7 +897,28 @@ h1 {
   height: 40px;
   color: #64ffda;
 }
-
+@media screen and (max-width:650px) {
+  .row100{
+    flex-direction: column;
+  }
+  .sec3 .project{
+    padding-right: 0;
+  }
+  .education{
+    width: 100%;
+  }
+}
+@media screen and (min-width:650px) {
+  .row100{
+    flex-direction: column;
+  }
+  .sec3 .project{
+    padding-right: 0;
+  }
+  .education{
+    width: 100%;
+  }
+}
 .container .row100 .inputBox input,
 .container .row100 .inputBox.textarea textarea {
   position: absolute;
