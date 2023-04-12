@@ -912,7 +912,9 @@ h1 {
   .container{
     width: 70%;
   }
+  
 }
+
 .container .row100 .inputBox input,
 .container .row100 .inputBox.textarea textarea {
   position: absolute;
@@ -999,7 +1001,7 @@ h1 {
   border-radius: 2px;
 }
 .sec5 .project{
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 .msg{
   width: 80%;
@@ -1008,4 +1010,100 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  height: 20vh;
+}
+.msg p{
+  font-size: 1.5rem;
+  color: #cecece;
+  text-align: center;
+}
+.msg p:nth-child(2){
+  animation: blink 1.5s linear infinite;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 5vh;
+}
+@keyframes blink{
+  from{
+    font-size: 1.5rem;
+  }
+  50%{
+    font-size: 2rem;
+
+  }
+  to{
+    font-size: 1.5rem;
+    
+  }
+}
+.phnmenu{
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10%;
+  flex-direction: column;
+  gap: 8px;
+opacity: 0;
+pointer-events: all;
+
+}
+.dsh{
+  width: 3rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.677);
+  background-color: #64ffda;
+  height: 3px;
+  border-radius: 1.5px;
+  position: relative;
+}
+.dsh:nth-child(1){
+  width: 4rem;
+  transform-origin: left;
+  transform: rotateX(0);
+
+}
+.dsh:nth-child(3){
+  transform-origin: left;
+}
+
+.dshcont{
+  display: flex;
+  width: max-content;
+  height: 3rem;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.dsh:nth-child(2){
+  width: 3.5rem;
+  transform-origin: right;
+  opacity: 1;
+}
+.phnmenu.active .dsh:nth-child(1){
+  transform: rotate(45deg);
+}
+.phnmenu.active .dsh:nth-child(2){
+  opacity: 0;
+}
+.phnmenu.active .dsh:nth-child(3){
+  
+  width: 4rem;
+  transform: rotate(-45deg);
+
+}
+@media screen and (max-width:1100px) {
+  .navmenu{
+    opacity: 0;
+    pointer-events: none;
+  }
+  .phnmenu{
+    opacity: 1;
+    pointer-events: all;
+  }
+  
 }
