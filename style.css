@@ -17,7 +17,16 @@ body {
   background-color: #0a1930;
   position: relative;
 }
-
+body::-webkit-scrollbar{
+  width: 10px;
+  position: absolute;
+  opacity: 0;
+  border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.158), rgba(255, 255, 255, 0.247));
+}
 html {
   font-size: 62.5%;
 }
@@ -1011,39 +1020,51 @@ h1 {
   position: relative;
   left: var(--left);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0;
   height: 20vh;
+  gap: 5px;
 }
 .msg p{
   font-size: 1.5rem;
   color: #cecece;
   text-align: center;
 }
-.msg p:nth-child(1){
-  position: absolute;
-
-  bottom: 9vh;
-
-}
-.msg p:nth-child(2){
-  animation: blinky 1.5s linear infinite;
-  position: absolute;
+.msg span{
   display: flex;
+  text-align: center;
   justify-content: center;
-  bottom: 5vh;
+  align-items: center;
+  font-size: 1.8rem;
+  color: rgb(196, 196, 196);
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 3rem;
+}
+.msg span:hover{
+  
+  color: #64ffda;
+  letter-spacing: 1px;
+}
+
+.msg .hrt{
+  animation: blinky 1.5s linear infinite;
+  display: flex;
+  font-size: 1.6rem;
 }
 @keyframes blinky{
   from{
-    font-size: 1.5rem;
+    transform: scale(1);
   }
   50%{
-    font-size: 2rem;
+    transform: scale(1.5);
 
   }
   to{
-    font-size: 1.5rem;
+    transform: scale(1);
+
     
   }
 }
@@ -1101,6 +1122,7 @@ pointer-events: all;
   transform-origin: right;
   opacity: 1;
 }
+
 .phnmenu.active .dsh:nth-child(1){
   transform: rotate(45deg);
 }
@@ -1240,5 +1262,13 @@ pointer-events: all;
   .writings h1, .project h1, h1{
     text-align: center;
     font-size: 3rem;
+  }
+}
+@media screen and (min-width:768px) {
+  .msg .soci{
+    display: none;
+  }
+  .msg span{
+    display: none;
   }
 }
