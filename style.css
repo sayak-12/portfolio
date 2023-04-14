@@ -9,6 +9,7 @@
   box-sizing: border-box;
   font-family: 'cascadia code', sans-serif;
   transition: 0.3s all;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -150,12 +151,13 @@ ion-icon {
   background-color: transparent;
 }
 
-#s2 span {
+#s2 a {
   position: inherit;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
   transform: rotate(90deg) translateX(-50%);
   height: 1rem;
   width: fit-content;
@@ -164,9 +166,10 @@ ion-icon {
   bottom: 16%;
   cursor: pointer;
   transition: 0.3s;
+
 }
 
-#s2 span:hover {
+#s2 a:hover {
   letter-spacing: 1px;
   color: #64ffda;
 }
@@ -1032,7 +1035,7 @@ h1 {
   color: #cecece;
   text-align: center;
 }
-.msg span{
+.msg .mail{
   display: flex;
   text-align: center;
   justify-content: center;
@@ -1042,8 +1045,9 @@ h1 {
   cursor: pointer;
   transition: 0.3s;
   margin-bottom: 3rem;
+  text-decoration: none;
 }
-.msg span:hover{
+.msg .mail:hover{
   
   color: #64ffda;
   letter-spacing: 1px;
@@ -1079,7 +1083,7 @@ h1 {
   flex-direction: column;
   gap: 8px;
 opacity: 0;
-pointer-events: all;
+pointer-events: none;
 
 }
 .dsh{
@@ -1268,7 +1272,7 @@ pointer-events: all;
   .msg .soci{
     display: none;
   }
-  .msg span{
+  .msg .mail{
     display: none;
   }
 }

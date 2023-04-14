@@ -1,3 +1,4 @@
+
 const spans = document.querySelectorAll(".logospan span");
 console.log(spans);
 let firstSpan = spans[0];
