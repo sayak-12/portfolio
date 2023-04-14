@@ -1,4 +1,4 @@
-
+var submitbtn = document.getElementById("submit");
 const spans = document.querySelectorAll(".logospan span");
 console.log(spans);
 let firstSpan = spans[0];
@@ -11,7 +11,6 @@ function typename() {
 }
 function delaytype(i) {
   setTimeout(() => {
-    console.log(text[i]);
     firstSpan.innerHTML += text[i];
   }, 300 * i);
 }
@@ -22,7 +21,6 @@ function deletename() {
 }
 function delaydelete(i) {
   setTimeout(() => {
-    console.log(text[i]);
     firstSpan.innerHTML = firstSpan.innerHTML.substring(0, text.length-i-1);
   }, 300 * i);
 }
@@ -52,3 +50,22 @@ document.querySelector('.phnmenu').addEventListener("click", ()=>{
   document.querySelector('.phnmenu').classList.toggle("active");
   document.querySelector('.menuside').classList.toggle("active");
 });
+submitbtn.onclick = ()=>{
+  var fname = document.getElementById("fname").value
+  var lname = document.getElementById("lname").value
+  var mail = document.getElementById("email").value
+  var ph = document.getElementById("ph1").value
+  var mesg = document.getElementById("mesg").value
+  var subj = `Message from ${fname} ${lname} from website`
+  var body = `Message from ${fname} ${lname}, from mail ${mail} and phone ${ph}, says: ${mesg}`
+  Email.send({
+    SecureToken : "c2328b75-619d-44ea-9be6-9577f4272fda",
+    To : 'sayakraha12@gmail.com',
+    From : "sayakraha12@gmail.com",
+    Subject : subj,
+    Body : body
+}).then(
+  message => alert(message)
+);
+console.log(done);
+}
