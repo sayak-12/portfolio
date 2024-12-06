@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Alegreya+Sans+SC:wght@300;400&family=Anton&family=Barlow:wght@300&family=Bebas+Neue&family=Cormorant+SC:wght@300;400;500;600;700&family=Cuprum:wght@400;500&family=Goldman:wght@400;700&family=Josefin+Slab:wght@300;400;600&family=Kanit:wght@500&family=Lato:wght@300;400;700&family=Lobster&family=Philosopher:wght@400;700&family=Poppins:wght@200;300;400;500;600&family=Secular+One&family=Teko:wght@300;400;500&family=Unna:wght@400;700&display=swap"
         rel="stylesheet">
     <title>Sayak Raha- Portfolio Website</title>
+    <script src="gsap.js"></script>
     <link rel="icon" href="favicon.ico">
 </head>
 
@@ -24,12 +25,12 @@
             <span id="sentence"></span><span>_</span>
         </div>
         <ul class="navmenu">
-            <li><a href="#about">//About_Me</a></li>
-            <li><a href="#project">//Projects</a></li>
-            <li><a href="#exp">//Experience</a></li>
-            <li><a href="#skills">//skills</a></li>
-            <li><a href="#contact">//Contact</a></li>
-            <li><a href="https://drive.google.com/file/d/1GtoYiPdpg1YrYhO7TQBXfMMNpJ0c4CGr/view" target="_blank" class="hire">//My_Resume</a></li>
+            <li class="navitem"><a href="#about">//About_Me</a></li>
+            <li class="navitem"><a href="#project">//Projects</a></li>
+            <li class="navitem"><a href="#exp">//Experience</a></li>
+            <li class="navitem"><a href="#skills">//skills</a></li>
+            <li class="navitem"><a href="#contact">//Contact</a></li>
+            <li class="navitem"><a href="https://drive.google.com/file/d/1GtoYiPdpg1YrYhO7TQBXfMMNpJ0c4CGr/view" target="_blank" class="hire">//My_Resume</a></li>
         </ul>
         <div class="phnmenu">
             <div class="dshcont">
@@ -71,59 +72,54 @@
 
     </div>
     
-    <div class="sec1" >
+    <div class="sec sec1" >
         <div class="writings">
             <h3>Hi, my name is</h3>
             <h1>Sayak Raha.</h1>
-            <p>An undergraduate B.Tech student, fullstack web developer, tech enthusiast and a quick learner. I am very
-                keen and eager to collaborate on interesting project ideas.</p>
+            <p>A Final Year B.Tech student, fullstack developer, Java SDE and an IoT enthusiast. I love problem solving, critical thinking and of course, building challeging stuff.</p>
             <a href="mailto:sayakraha12@gmail.com?subject=Contacting%20for%20hiring%20opportunity" target="_blank">Hire me!</a>
         </div>
-        <div class="pic"><img src="sayak2.png" alt=""></div>
+        <div class="pic pic1"><img src="sayak2.png" alt=""></div>
     </div>
-    <div class="sec2" id="about">
+    <div class="sec sec2" id="about">
         <div class="pic"><img src="sayak.png" alt=""></div>
         <div class="writings">
             <h1>//About_Me</h1>
-            <div>My name is <b>Sayak Raha</b>, currently a student in University of Engineering & Management Kolkata,
-                pursuing Bachelor of Technology (B.Tech.) in CSE(IOT).I love building websites and designing things
-                that leave an impression on the user's mind. I also love quizzing, reading books, and gaming. <br><br>I
-                have
-                developed a keen interest on Open-source Contribution, WEB3 and cloud development. I have completed and
-                even ongoing internships in reknowned companies such as <b>Fantastiqo</b> and <b>IEMLabs</b>. However, I
-                am always free to talk and contribute to projects that interest me, so feel free to knock! <br><br>
+            <div>My name is <b>Sayak Raha</b>, a final-year student at University of Engineering & Management, Kolkata, pursuing a Bachelor of Technology (B.Tech.) in Computer Science & Engineering (IoT). I am passionate about building impactful websites, software solutions, and IoT technologies that solve real-world problems. Beyond technology, I enjoy quizzing, reading books, and gaming. <br><br>
+                I have developed a strong interest in open-source contributions, WEB3, and cloud technologies, alongside hands-on experience with RHEL, CentOS, Java development, and Apache server management. My practical knowledge has been honed through internships at reputed organizations like <b>Fantastiqo</b> and <b>IEMLabs</b>, as well as several client projects, including <b>Garden Reach ShipBuilders</b> and <b>Taaza TV</b>.
+                <br><br>
                 These are the Technologies I am working on/learning right now: <br><br>
                 <div class="list">
-                    <div><ion-icon name="caret-forward-outline"></ion-icon>JavaScript(ES6+)</div>
+                    <div><ion-icon name="caret-forward-outline"></ion-icon>Laravel</div>
+                    <div><ion-icon name="caret-forward-outline"></ion-icon>Next JS</div>
+                    <div><ion-icon name="caret-forward-outline"></ion-icon>MERN Stack (React)</div>
                     <div><ion-icon name="caret-forward-outline"></ion-icon>PHP</div>
-                    <div><ion-icon name="caret-forward-outline"></ion-icon>MERN Stack</div>
-                    <div><ion-icon name="caret-forward-outline"></ion-icon>Solidity</div>
-                    <div><ion-icon name="caret-forward-outline"></ion-icon>Bootstrap</div>
+                    <div><ion-icon name="caret-forward-outline"></ion-icon>TailwindCSS</div>
                     <div><ion-icon name="caret-forward-outline"></ion-icon>TypeScript</div>
+                    <div><ion-icon name="caret-forward-outline"></ion-icon>Springboot</div>
+                    <div><ion-icon name="caret-forward-outline"></ion-icon>Django</div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="sec2" id="project">
+    <div class="sec sec2" id="project">
         <div class="project">
-            <h1>//Things I've built</h1>
+            <h1>//Development Projects</h1>
             <div class="project1">
                 <div class="pic"></div>
                 <div class="details">
                     <h3>Featured Project #1</h3>
-                    <h2>NextDictionary</h2>
-                    <p>A comprehensive dictionary webapp using HTML, CSS, Bootstrap and JavaScript with Firebase backend
-                        Connectivity. It has a minimal design, dark/light mode, bookmark, search history and word of the
-                        day feature.</p>
+                    <h2>Ourkennel</h2>
+                    <p>A comprehensive Pet Care Website built with a modern UI, featuring a login system and a dedicated social media platform for pet owners to connect, share, and celebrate their pets. The website includes features like pet adoption and buying and a street pet welfare section for reporting and assisting stray animals. With a MongoDB backend, cloud-based image storage, and responsive design, it ensures seamless performance and accessibility. Additional features include a personalized dashboard for managing pets, community forums, and curated resources for pet care.</p>
                     <ul class="tech">
-                        <li>API</li>
-                        <li>Bootstrap5</li>
-                        <li>Firebase</li>
-                        <li>JavaScript(ES6)</li>
+                        <li>MongoDB</li>
+                        <li>Express</li>
+                        <li>React</li>
+                        <li>Node.js</li>
                     </ul>
                     <div class="buttons">
-                        <a class="github" href="https://github.com/sayak-12/nextDICTIONARY" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
-                        <a class="goto"  href="https://nextdictionary-47e38.firebaseapp.com/" target="_blank"><ion-icon name="exit-outline"></ion-icon></a>
+                        <a class="github" href="https://github.com/sayak-12/OurKennel" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+                        <a class="goto"  href="https://ourkennell.netlify.app/" target="_blank"><ion-icon name="open-outline"></ion-icon></a>
                     </div>
                 </div>
             </div>
@@ -131,20 +127,18 @@
 
                 <div class="details1">
                     <h3>Featured Project #2</h3>
-                    <h2>Scientific Calculator</h2>
-                    <p>A Neumorphic Design scientific calculator webApp, designed to made your scientific calculations
-                        easy. We can switch to Normal mode to do normal calculations and scientific mode for scientific
-                        calculations. It also has dark/light mode options and an history tab to look upon the
-                        calculation history.</p>
+                    <h2>Greenhack</h2>
+                    <p>GreenHack Agrotech WebApp is a cutting-edge platform designed to revolutionize urban agriculture and gardening. It features a modern UI and integrates IoT sensors with machine learning models to provide real-time insights into air temperature, soil moisture, and NPK levels. The platform supports smart water management with automated DC motor control for water pumps, preventing waterlogging and ensuring optimal crop health. It offers features like crop recommendations, field monitoring, and detailed analytics. GreenHack is a one stop solution for sustainable and efficient farming practices.</p>
                     <ul class="tech">
-                        <li>JavaScript</li>
-                        <li>CSS</li>
-                        <li>HTML</li>
-                        <li>Git</li>
+                        <li>NoSQL</li>
+                        <li>WebSocket</li>
+                        <li>Flask</li>
+                        <li>React</li>
+                        <li>Node</li>
                     </ul>
                     <div class="buttons">
                         <a class="github" href="https://github.com/sayak-12/scientific-calculator" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
-                        <a class="goto"  href="https://sayak-12.github.io/scientific-calculator/" target="_blank"><ion-icon name="exit-outline"></ion-icon></a>
+                        <a class="goto"  href="https://sayak-12.github.io/scientific-calculator/" target="_blank"><ion-icon name="open-outline"></ion-icon></a>
                     </div>
                 </div>
                 <div class="pic"></div>
@@ -153,26 +147,25 @@
                 <div class="pic"></div>
                 <div class="details">
                     <h3>Featured Project #3</h3>
-                    <h2>Audio Visualizer</h2>
-                    <p>A WebApp where you can upload your favourite song and watch it's audio visualizer. Now vibe with
-                        your song watching this colourful bars dancing aroung your browser tab! It was made as a project
-                        in HacktoberFest 2022.</p>
+                    <h2>Tech.care</h2>
+                    <p>Tech.Care is a robust hospital management system built on the MERN stack with Next.js for server-side rendering and optimized performance. It eases hospital operations with features like patient registration and records management, appointment scheduling, doctor patient communication, and billing automation. The system includes a secure MongoDB backend for data management, real time notifications, and a responsive design for seamless access on any device. With cloud integration for reports and analytics, Tech.Care ensures efficient healthcare administration, making it an ideal solution for modern hospitals.</p>
                     <ul class="tech">
-                        <li>JavaScript</li>
-                        <li>AudioContext</li>
-                        <li>Canvas</li>
-                        <li>CSS</li>
+                        <li>MongoDB</li>
+                        <li>TailwindCSS</li>
+                        <li>React</li>
+                        <li>Node</li>
+                        <li>Next</li>
                     </ul>
                     <div class="buttons">
-                        <a class="github" href="https://github.com/sayak-12/AudioVisualiser.app" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
-                        <a class="goto"  href="https://sayak-12.github.io/AudioVisualiser.app/" target="_blank"><ion-icon name="exit-outline"></ion-icon></a>
+                        <a class="github" href="#" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+                        <a class="goto"  href="#" target="_blank"><ion-icon name="open-outline"></ion-icon></a>
                     </div>
                 </div>
             </div>
             <a href="https://github.com/sayak-12?page=1&tab=repositories" target="_blank" class="explore">Explore More</a>
         </div>
     </div>
-    <div class="sec3" id="exp">
+    <div class="sec sec3" id="exp">
         <div class="project">
             <h1>//My Journey so far...</h1>
             <div class="education">
@@ -211,22 +204,13 @@
                         <li>
                             <div class="content">
                                 <h3>University of Engineering & Management, Kolkata</h3>
-                                <p>After qualifying in WBJEE, I took admission in UEM, Kolkata in B.Tech.(CSE IOT). So far (after 4th semester) my combined gpa is 9.7+.</p>
+                                <p>After qualifying in WBJEE, I took admission in UEM, Kolkata in B.Tech.(CSE IOT). My current gpa is 9.08.</p>
                             </div>
                             <div class="time">
                                 <h4>2021-present</h4>
                             </div>
                         </li>
                         <li><h1>Working Experience</h1></li>
-                        <li>
-                            <div class="content">
-                                <h3>BBD Online Training Centre</h3>
-                                <p>Non-technical, HR role</p>
-                            </div>
-                            <div class="time">
-                                <h4>Nov 2020 - Jul 2021</h4>
-                            </div>
-                        </li>
                         <li>
                             <div class="content">
                                 <h3>Fantastiqo</h3>
@@ -238,11 +222,11 @@
                         </li>
                         <li>
                             <div class="content">
-                                <h3>IEMlabs</h3>
-                                <p>Web Development Intern & Development Training faculty</p>
+                                <h3>IEMA R&D</h3>
+                                <p>Web Developer Intern</p>
                             </div>
                             <div class="time">
-                                <h4>Nov 2022- Feb 2023</h4>
+                                <h4>Jan 2023 - present</h4>
                             </div>
                         </li>
                         <div style="clear:both;"></div>
@@ -251,7 +235,7 @@
             </div>
         </div>
     </div>
-    <div class="sec4" id="skills">
+    <div class="sec sec4" id="skills">
         <div class="project">
             <h1>//Skills</h1>
             <dl class="skills-diagram">
@@ -265,6 +249,8 @@
                 <dd>8</dd>
                 <dt class="skill-4">PHP</dt>
                 <dd>4</dd>
+                <dt class="skill-5">Linux</dt>
+                <dd>5</dd>
                 <dt class="skill-6">HTML5</dt>
                 <dd>6</dd>
                 <dt class="skill-7">React</dt>
@@ -273,8 +259,12 @@
                 <dd>13</dd>
                 <dt class="skill-9">JavaScript</dt>
                 <dd>9</dd>
-                <dt class="skill-2">C++</dt>
+                <dt class="skill-2">Next</dt>
                 <dd>2</dd>
+                <dt class="skill-8">TailwindCSS</dt>
+                <dd>8</dd>
+                <dt class="skill-7">SpringBoot</dt>
+                <dd>7</dd>
                 <dt class="skill-11">Python</dt>
                 <dd>11</dd>
                 <dt class="skill-12">MongoDB</dt>
@@ -282,7 +272,7 @@
               </dl>
         </div>
     </div>
-    <div class="sec5" id="contact">
+    <div class="sec sec5" id="contact">
         <div class="project">
             <h1>//Let's Talk</h1>
             <div class="container">
@@ -350,13 +340,16 @@
         <p>Developed by Sayak Raha, with </p><div class="hrt" style="margin-bottom: 1rem;">❤️</div>
         <span class="credits" style="margin-bottom: 5rem;">Huge thanks to <a href="https://brittanychiang.com/" target="_blank">Brittany Chiang</a> for the beautiful design inspiration and <a href="https://github.com/VincentGarreau" target="_blank">Vincent Garreau</a> for the particles.js library</span>
     </div>
+    
     <script src="script.js"></script>
+    <script src="gsapinit.js"></script>
     <script src="particles.js-master/particles.js"></script>
     <script src=
     "particles.js-master/demo/js/app.js">
 </script>
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
+    
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
