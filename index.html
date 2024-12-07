@@ -12,7 +12,8 @@
         href="https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Alegreya+Sans+SC:wght@300;400&family=Anton&family=Barlow:wght@300&family=Bebas+Neue&family=Cormorant+SC:wght@300;400;500;600;700&family=Cuprum:wght@400;500&family=Goldman:wght@400;700&family=Josefin+Slab:wght@300;400;600&family=Kanit:wght@500&family=Lato:wght@300;400;700&family=Lobster&family=Philosopher:wght@400;700&family=Poppins:wght@200;300;400;500;600&family=Secular+One&family=Teko:wght@300;400;500&family=Unna:wght@400;700&display=swap"
         rel="stylesheet">
     <title>Sayak Raha- Portfolio Website</title>
-    <script src="gsap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <link rel="icon" href="favicon.ico">
 </head>
 
@@ -30,7 +31,7 @@
             <li class="navitem"><a href="#exp">//Experience</a></li>
             <li class="navitem"><a href="#skills">//skills</a></li>
             <li class="navitem"><a href="#contact">//Contact</a></li>
-            <li class="navitem"><a href="https://drive.google.com/file/d/1GtoYiPdpg1YrYhO7TQBXfMMNpJ0c4CGr/view" target="_blank" class="hire">//My_Resume</a></li>
+            <li class="navitem"><a href="https://drive.google.com/file/d/15cUbSsveFwnsXxYb5IE98ceRy0MaLPUc/view?usp=sharing" target="_blank" class="hire">//My_Resume</a></li>
         </ul>
         <div class="phnmenu">
             <div class="dshcont">
@@ -105,7 +106,7 @@
     <div class="sec sec2" id="project">
         <div class="project">
             <h1>//Development Projects</h1>
-            <div class="project1">
+            <div class="project1" id="proj1">
                 <div class="pic"></div>
                 <div class="details">
                     <h3>Featured Project #1</h3>
@@ -123,7 +124,7 @@
                     </div>
                 </div>
             </div>
-            <div class="project1">
+            <div class="project1" id="proj2">
 
                 <div class="details1">
                     <h3>Featured Project #2</h3>
@@ -143,7 +144,7 @@
                 </div>
                 <div class="pic"></div>
             </div>
-            <div class="project1">
+            <div class="project1" id="proj3">
                 <div class="pic"></div>
                 <div class="details">
                     <h3>Featured Project #3</h3>
@@ -341,17 +342,22 @@
         <span class="credits" style="margin-bottom: 5rem;">Huge thanks to <a href="https://brittanychiang.com/" target="_blank">Brittany Chiang</a> for the beautiful design inspiration and <a href="https://github.com/VincentGarreau" target="_blank">Vincent Garreau</a> for the particles.js library</span>
     </div>
     
-    <script src="script.js"></script>
-    <script src="gsapinit.js"></script>
+    
+    
     <script src="particles.js-master/particles.js"></script>
     <script src=
     "particles.js-master/demo/js/app.js">
 </script>
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+    </script>
+    <script src="gsapinit.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -17,6 +17,7 @@ body {
   height: 100vh;
   background-color: #0a1930;
   position: relative;
+  overflow-x: hidden;
 }
 body::-webkit-scrollbar{
   width: 10px;
@@ -340,7 +341,7 @@ div b {
 }
 
 .project h1 {
-  margin: 5rem 0;
+  margin: 2rem 0;
 }
 
 .project1 {
@@ -511,18 +512,26 @@ div b {
   box-sizing: border-box;
 }
 
-.timeline {
-  padding-bottom: 0;
-  margin-bottom: 5rem;
-}
 
 .timeline:before {
   content: '';
   position: absolute;
   left: 50%;
   width: 2px;
-  height: 100%;
+  height: calc(100% - 80px);
   background: rgb(196, 196, 196);
+}
+.timeline::after{
+  content: '';
+  position: absolute;
+  left: calc(50% - 4px);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: calc(var(--top) + var(--top-offset));
+  background: chartreuse;
+background: radial-gradient(circle, chartreuse 0%, rgba(44,235,0,0) 100%);
+box-shadow: 0 0 10px chartreuse;
 }
 
 .timeline ul {
@@ -644,7 +653,10 @@ div b {
 
   .timeline:before {
     left: 20px;
-    height: 100%;
+    height: calc(100% - 80px);
+  }
+  .timeline::after {
+    left: 16px;
   }
 
   .timeline ul li:nth-child(odd),
@@ -660,7 +672,9 @@ div b {
     top: -18px;
     left: 16px;
   }
-
+  .timeline ul li:nth-child(1):before{
+    top:0;
+  }
   .timeline ul li:nth-child(odd) .time,
   .timeline ul li:nth-child(even) .time {
     top: -30px;
