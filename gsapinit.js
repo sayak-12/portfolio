@@ -1,4 +1,3 @@
-
 if (window.innerWidth >= 1124) {
   const timeline = gsap.timeline();
 timeline.fromTo(".socials", { 
@@ -37,8 +36,9 @@ timeline.fromTo(".socials", {
   
 }
 
+// Project 1 - GitMaster
 gsap.fromTo(
-  "#proj1 .pic",
+  "#proj1 .details h2",
   {
     opacity: 0,
     x:"-20%",
@@ -73,8 +73,10 @@ gsap.fromTo(
     }
   }
 )
+
+// Project 2 - Companio
 gsap.fromTo(
-  "#proj2 .pic",
+  "#proj2 .details h2",
   {
     opacity: 0,
     x:"20%",
@@ -92,7 +94,7 @@ gsap.fromTo(
   }
 );
 gsap.fromTo(
-  "#proj2 .details1 p",
+  "#proj2 .details p",
   {
     opacity: 0,
     x:"-20%",
@@ -109,8 +111,10 @@ gsap.fromTo(
     }
   }
 );
+
+// Project 3 - AI Parental Control
 gsap.fromTo(
-  "#proj3 .pic",
+  "#proj3 .details h2",
   {
     opacity: 0,
     x:"-20%",
@@ -139,6 +143,82 @@ gsap.fromTo(
     x:"0%",
     scrollTrigger: {
       trigger: "#proj3",
+      start: "-10% 95%",
+      end: "30% 60%",
+      scrub:true,
+    }
+  }
+);
+
+// Project 4 - AI E-commerce Platform
+gsap.fromTo(
+  "#proj4 .details h2",
+  {
+    opacity: 0,
+    x:"20%",
+    duration: 0.4,
+  },
+  {
+    opacity: 1,
+    x:"0%",
+    scrollTrigger: {
+      trigger: "#proj4",
+      start: "-10% 95%",
+      end: "30% 60%",
+      scrub:true,
+    }
+  }
+);
+gsap.fromTo(
+  "#proj4 .details p",
+  {
+    opacity: 0,
+    x:"-20%",
+    duration: 0.4,
+  },
+  {
+    opacity: 1,
+    x:"0%",
+    scrollTrigger: {
+      trigger: "#proj4",
+      start: "-10% 95%",
+      end: "30% 60%",
+      scrub:true,
+    }
+  }
+);
+
+// Project 6 - Anomaly Detection (keeping the same ID as in HTML)
+gsap.fromTo(
+  "#proj6 .details h2",
+  {
+    opacity: 0,
+    x:"-20%",
+    duration: 0.4,
+  },
+  {
+    opacity: 1,
+    x:"0%",
+    scrollTrigger: {
+      trigger: "#proj6",
+      start: "-10% 95%",
+      end: "30% 60%",
+      scrub:true,
+    }
+  }
+);
+gsap.fromTo(
+  "#proj6 .details p",
+  {
+    opacity: 0,
+    x:"20%",
+    duration: 0.4,
+  },
+  {
+    opacity: 1,
+    x:"0%",
+    scrollTrigger: {
+      trigger: "#proj6",
       start: "-10% 95%",
       end: "30% 60%",
       scrub:true,
